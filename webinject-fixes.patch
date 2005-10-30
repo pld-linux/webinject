@@ -1,0 +1,35 @@
+--- ./webinject.pl~	2005-04-07 16:35:06.000000000 +0300
++++ ./webinject.pl	2005-10-30 17:44:29.000000000 +0200
+@@ -1146,8 +1146,8 @@
+         open(CONFIG, "$dirname"."$opt_configfile") or die "\nERROR: Failed to open $opt_configfile file\n\n";
+         $configexists = 1;  #flag we are going to use a config file
+     }
+-    elsif (-e "$dirname"."config.xml") {  #if config.xml exists, read it
+-        open(CONFIG, "$dirname"."config.xml") or die "\nERROR: Failed to open config.xml file\n\n";
++    elsif (-e "/etc/webinject/config.xml") {  #if config.xml exists, read it
++        open(CONFIG, "/etc/webinject/config.xml") or die "\nERROR: Failed to open config.xml file\n\n";
+         $configexists = 1;  #flag we are going to use a config file
+     } 
+         
+--- ./webinject.pl~	2005-10-30 17:44:29.000000000 +0200
++++ ./webinject.pl	2005-10-30 17:49:52.000000000 +0200
+@@ -1187,7 +1187,7 @@
+         }    
+             
+         unless ($casefilelist[0]) {
+-            if (-e "$dirname"."testcases.xml") {
++            if (-e "/etc/webinject/testcases.xml") {
+                 #not appending a $dirname here since we append one when we open the file
+                 push @casefilelist, "testcases.xml";  #if no files are specified in config.xml, default to testcases.xml
+             }
+--- ./webinject.pl~	2005-10-30 17:56:05.000000000 +0200
++++ ./webinject.pl	2005-10-30 17:56:30.000000000 +0200
+@@ -1332,7 +1332,7 @@
+         
+     my @xmltoconvert;        
+         
+-    open(XMLTOCONVERT, "$dirname"."$currentcasefile") or die "\nError: Failed to open test case file\n\n";  #open file handle   
++    open(XMLTOCONVERT, "/etc/webinject/$currentcasefile") or die "\nError: Failed to open test case file\n\n";  #open file handle   
+     @xmltoconvert = <XMLTOCONVERT>;  #read the file into an array
+         
+     $casecount = 0;
