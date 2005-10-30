@@ -2,6 +2,7 @@
 # - needs fixes as the program attempts to write tmp files as dirname($0)/tmp.$$.tmp !!!
 %include	/usr/lib/rpm/macros.perl
 Summary:	Tool for automating tests of web applications and services
+Summary(pl):	Narzêdzie do automatyzowania testów aplikacji i us³ug WWW
 Name:		webinject
 Version:	1.35
 Release:	0.9
@@ -33,14 +34,35 @@ by the WebInject User Interface (GUI). Optionally, it can be used as a
 standalone test runner (text/console application) which can be
 integrated and called from other test frameworks or applications.
 
+%description -l pl
+WebInject to wolnodostêpne narzêdzie do zautomatyzowanego testowania
+aplikacji i us³ug WWW. Mo¿e byæ u¿ywane do testowania poszczególnych
+komponentów systemu maj±cych interfejsy HTTP (JSP, ASP, CGI, PHP,
+Servlety, formularze HTML itp.), a tak¿e jako ¶rodowisko do tworzenia
+zestawu zautomatyzowanych testów funkcjonalnych, akceptowalno¶ci i
+regresji (na poziomie HTTP). ¦rodowisko testowe umo¿liwia uruchamianie
+wielu przypadków testowych i zbieranie/raportowanie wyników. WebInject
+oferuje wy¶wietlanie wyników w czasie rzeczywistym i mo¿e byæ u¿ywany
+do monitorowania czasów odpowiedzi systemu.
+
+WebInject mo¿e byæ u¿ywany jako kompletne ¶rodowisko testowe sterowane
+z poziomu graficznego interfejsu u¿ytkownika. Opcjonalnie mo¿e byæ
+u¿ywane tak¿e jako samodzielne narzêdzie do uruchamiania testów
+(aplikacja tekstowa/konsolowa), która mo¿e byæ zintegrowana i
+wywo³ywana z innych ¶rodowisk lub aplikacji testowych.
+
 %package gui
-Summary:	Webinject GUI
-Group:		Applications/Web
+Summary:	WebInject GUI
+Summary(pl):	Graficzny interfejs u¿ytkownika do WebInjecta
+Group:		Applications/WWW
 # not autodetected
 Requires:	perl-Tk-ProgressBar-Mac
 
 %description gui
-GUI Tool for webinject.
+GUI Tool for WebInject.
+
+%description gui -l pl
+Graficzny interfejs u¿ytkownika do WebInjecta.
 
 %prep
 %setup -q -n %{name}
