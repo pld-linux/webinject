@@ -4,13 +4,14 @@
 Summary:	Tool for automating tests of web applications and services
 Name:		webinject
 Version:	1.35
-Release:	0.4
+Release:	0.9
 License:	GPL v2
 Group:		Applications/Networking
 Source0:	http://dl.sourceforge.net/webinject/%{name}-%{version}.src.tar.gz
 # Source0-md5:	d2d7e3cd7063d1cd5ac11507871ac196
 Patch0:		%{name}-fixes.patch
 URL:		http://www.webinject.org/
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,6 +36,8 @@ integrated and called from other test frameworks or applications.
 %package gui
 Summary:	Webinject GUI
 Group:		Applications/Web
+# not autodetected
+Requires:	perl-Tk-ProgressBar-Mac
 
 %description gui
 GUI Tool for webinject.
