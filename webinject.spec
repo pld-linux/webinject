@@ -2,7 +2,7 @@
 # - needs fixes as the program attempts to write tmp files as dirname($0)/tmp.$$.tmp !!!
 %include	/usr/lib/rpm/macros.perl
 Summary:	Tool for automating tests of web applications and services
-Summary(pl):	NarzÍdzie do automatyzowania testÛw aplikacji i us≥ug WWW
+Summary(pl.UTF-8):   Narzƒôdzie do automatyzowania test√≥w aplikacji i us≈Çug WWW
 Name:		webinject
 Version:	1.35
 Release:	0.9
@@ -34,26 +34,26 @@ by the WebInject User Interface (GUI). Optionally, it can be used as a
 standalone test runner (text/console application) which can be
 integrated and called from other test frameworks or applications.
 
-%description -l pl
-WebInject to wolnodostÍpne narzÍdzie do zautomatyzowanego testowania
-aplikacji i us≥ug WWW. Moøe byÊ uøywane do testowania poszczegÛlnych
-komponentÛw systemu maj±cych interfejsy HTTP (JSP, ASP, CGI, PHP,
-Servlety, formularze HTML itp.), a takøe jako ∂rodowisko do tworzenia
-zestawu zautomatyzowanych testÛw funkcjonalnych, akceptowalno∂ci i
-regresji (na poziomie HTTP). ¶rodowisko testowe umoøliwia uruchamianie
-wielu przypadkÛw testowych i zbieranie/raportowanie wynikÛw. WebInject
-oferuje wy∂wietlanie wynikÛw w czasie rzeczywistym i moøe byÊ uøywany
-do monitorowania czasÛw odpowiedzi systemu.
+%description -l pl.UTF-8
+WebInject to wolnodostƒôpne narzƒôdzie do zautomatyzowanego testowania
+aplikacji i us≈Çug WWW. Mo≈ºe byƒá u≈ºywane do testowania poszczeg√≥lnych
+komponent√≥w systemu majƒÖcych interfejsy HTTP (JSP, ASP, CGI, PHP,
+Servlety, formularze HTML itp.), a tak≈ºe jako ≈õrodowisko do tworzenia
+zestawu zautomatyzowanych test√≥w funkcjonalnych, akceptowalno≈õci i
+regresji (na poziomie HTTP). ≈örodowisko testowe umo≈ºliwia uruchamianie
+wielu przypadk√≥w testowych i zbieranie/raportowanie wynik√≥w. WebInject
+oferuje wy≈õwietlanie wynik√≥w w czasie rzeczywistym i mo≈ºe byƒá u≈ºywany
+do monitorowania czas√≥w odpowiedzi systemu.
 
-WebInject moøe byÊ uøywany jako kompletne ∂rodowisko testowe sterowane
-z poziomu graficznego interfejsu uøytkownika. Opcjonalnie moøe byÊ
-uøywane takøe jako samodzielne narzÍdzie do uruchamiania testÛw
-(aplikacja tekstowa/konsolowa), ktÛra moøe byÊ zintegrowana i
-wywo≥ywana z innych ∂rodowisk lub aplikacji testowych.
+WebInject mo≈ºe byƒá u≈ºywany jako kompletne ≈õrodowisko testowe sterowane
+z poziomu graficznego interfejsu u≈ºytkownika. Opcjonalnie mo≈ºe byƒá
+u≈ºywane tak≈ºe jako samodzielne narzƒôdzie do uruchamiania test√≥w
+(aplikacja tekstowa/konsolowa), kt√≥ra mo≈ºe byƒá zintegrowana i
+wywo≈Çywana z innych ≈õrodowisk lub aplikacji testowych.
 
 %package gui
 Summary:	WebInject GUI
-Summary(pl):	Graficzny interfejs uøytkownika do WebInjecta
+Summary(pl.UTF-8):   Graficzny interfejs u≈ºytkownika do WebInjecta
 Group:		Applications/WWW
 # not autodetected
 Requires:	perl-Tk-ProgressBar-Mac
@@ -61,8 +61,8 @@ Requires:	perl-Tk-ProgressBar-Mac
 %description gui
 GUI Tool for WebInject.
 
-%description gui -l pl
-Graficzny interfejs uøytkownika do WebInjecta.
+%description gui -l pl.UTF-8
+Graficzny interfejs u≈ºytkownika do WebInjecta.
 
 %prep
 %setup -q -n %{name}
