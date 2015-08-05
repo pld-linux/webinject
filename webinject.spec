@@ -4,12 +4,12 @@
 Summary:	Tool for automating tests of web applications and services
 Summary(pl.UTF-8):	Narzędzie do automatyzowania testów aplikacji i usług WWW
 Name:		webinject
-Version:	1.35
-Release:	0.9
+Version:	1.41
+Release:	0.1
 License:	GPL v2
 Group:		Applications/Networking
-Source0:	http://dl.sourceforge.net/webinject/%{name}-%{version}.src.tar.gz
-# Source0-md5:	d2d7e3cd7063d1cd5ac11507871ac196
+Source0:	http://downloads.sourceforge.net/webinject/%{name}-%{version}.src.tar.gz
+# Source0-md5:	5c90ddd69719d897afd8ccb2f8528163
 Patch0:		%{name}-fixes.patch
 URL:		http://www.webinject.org/
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -27,7 +27,7 @@ automated functional, acceptance, and regression tests. A test
 harness, also referred to as a test driver or a test framework, allows
 you to run many test cases and collect/report your results. WebInject
 offers real-time results display and may also be used for monitoring
-system response times. 
+system response times.
 
 WebInject can be used as a complete test framework that is controlled
 by the WebInject User Interface (GUI). Optionally, it can be used as a
@@ -72,10 +72,10 @@ Graficzny interfejs użytkownika do WebInjecta.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir}}
 
-install %{name}.pl $RPM_BUILD_ROOT%{_bindir}
-install %{name}gui.pl $RPM_BUILD_ROOT%{_bindir}
-install config.xml $RPM_BUILD_ROOT%{_sysconfdir}
-install testcases.xml $RPM_BUILD_ROOT%{_sysconfdir}
+install -p %{name}.pl $RPM_BUILD_ROOT%{_bindir}
+install -p %{name}gui.pl $RPM_BUILD_ROOT%{_bindir}
+cp -p config.xml $RPM_BUILD_ROOT%{_sysconfdir}
+cp -p testcases.xml $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
