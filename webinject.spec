@@ -1,6 +1,5 @@
 # TODO
 # - needs fixes as the program attempts to write tmp files as dirname($0)/tmp.$$.tmp !!!
-%include	/usr/lib/rpm/macros.perl
 Summary:	Tool for automating tests of web applications and services
 Summary(pl.UTF-8):	Narzędzie do automatyzowania testów aplikacji i usług WWW
 Name:		webinject
